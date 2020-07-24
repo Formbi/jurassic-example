@@ -5,4 +5,8 @@
         <TargetFramework>netcoreapp3.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Jurassic" Version="3.1.0" />
+      <PackageReference Include="PInvoke.AdvApi32" Version="0.6.49" />
+    </ItemGroup>
 </Project>
