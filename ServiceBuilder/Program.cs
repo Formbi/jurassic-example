@@ -17,6 +17,10 @@ namespace ServiceBuilder
                 throw new Exception($"File does not exist - '{scriptPath}'");
             var engine = new ScriptEngine();
             engine.SetGlobalValue("ServiceBuilder", new Builder(engine));
+            engine.SetGlobalValue("AccessRight", new AccessRight(engine));
+            engine.SetGlobalValue("ErrorControl", new ErrorControl(engine));
+            engine.SetGlobalValue("ServiceType", new ServiceType(engine));
+            engine.SetGlobalValue("StartType", new StartType(engine));
             engine.ExecuteFile(scriptPath);
         }
     }

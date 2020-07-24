@@ -11,9 +11,9 @@ namespace ServiceBuilder.JsIntegration
         private string serviceName;
         private string displayName;
         private Kernel32.ACCESS_MASK desiredAccess = new Kernel32.ACCESS_MASK(AccessRight.GenericRead);
-        private AdvApi32.ServiceType serviceType;
-        private AdvApi32.ServiceStartType startType;
-        private AdvApi32.ServiceErrorControl errorControl;
+        private AdvApi32.ServiceType serviceType = AdvApi32.ServiceType.SERVICE_WIN32;
+        private AdvApi32.ServiceStartType startType = AdvApi32.ServiceStartType.SERVICE_AUTO_START;
+        private AdvApi32.ServiceErrorControl errorControl = AdvApi32.ServiceErrorControl.SERVICE_ERROR_NORMAL;
         private string binaryPathName;
         private string serviceStartName;
         private string password;
